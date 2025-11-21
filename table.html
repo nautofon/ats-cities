@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<title>ATS Cities</title>
+
+<script src="//code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="//cdn.datatables.net/2.3.5/js/dataTables.min.js"></script>
+<script>
+$(document).ready( function () {
+  var table = $('table').DataTable({ paging: false });
+  table.order([0, 'asc']).draw();
+});
+</script>
+<style>
+@import url(//cdn.datatables.net/2.3.5/css/dataTables.dataTables.min.css);
+
+html {
+  max-width: 40em;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif;
+  color: black;
+  background-color: white;
+}
+h1 {
+  font-size: 120%;
+}
+.updated {
+  margin-bottom: 0;
+}
+div.dt-container div.dt-layout-row:first-child {
+  margin-top: 0;
+}
+tr:nth-child(even) td {
+  background-color: #f8f8f8;
+}
+td + td + td, #no th + th + th {
+  color: #f50;
+}
+td + td + td {
+  font-family: "SFMono-Regular", "Consolas", "Liberation Mono", "Menlo", "Courier", monospace;
+  font-size: 92%;
+}
+.dt-info, .updated {
+  font-size: 70%;
+}
+</style>
+
+<h1>ATS Cities</h1>
