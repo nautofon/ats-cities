@@ -41,6 +41,9 @@ jobs:
           my $json = decode_json $response->{content};
 
           # Temp fix: Add cities currently missing from extra-labels dataset
+          $json->{features} = [ grep {
+            ($_->{properties}{text} // '') ne 'Saint Joseph'
+          } $json->{features}->@* ];
           push $json->{features}->@*,
             map {+{ properties => { kind => 'city', $_->%* } }} (
               { country => 'US-CA', text => 'Hilt',         city => 'hilt' },
