@@ -4,11 +4,9 @@ name: Publish
 on:
   workflow_dispatch:
   push:
-    branches:
-      - 'main'
 
 jobs:
-  typeset:
+  publish:
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -32,6 +30,7 @@ jobs:
           use Path::Tiny;
           use Text::CSV 'csv';
           use Text::Table::HTML;
+          use Time::Piece;
 
           my $url = 'https://truckermudgeon.github.io/extra-labels.geojson';
           my $dir = path 'pages';
@@ -106,7 +105,7 @@ jobs:
 
           $dir->child('index.html')->spew_utf8(
             path('table.html')->slurp_utf8,
-            sprintf("<p class=updated>Last updated: %s UTC\n\n", scalar gmtime),
+            sprintf("<p class=updated>Last updated: %s\n\n", gmtime->strftime),
             Text::Table::HTML::table(
               rows => [$header, @table],
               header_row => 1,
