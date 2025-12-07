@@ -95,7 +95,10 @@ my @table = map {[
 csv in => [$header, @table], out => "$dir/ats-cities.csv";
 
 # Get human-readable country/state names for HTML output
-$_->[0] = $countries{ $_->[0] }{name} for @table;
+# As a fallback for states that have no name in the CSV table yet,
+# use the country code instead, but prefixed with a space so that
+# it sorts at the top of the output and is thus immediately obvious.
+$_->[0] = $countries{ $_->[0] }{name} // " $_->[0]" for @table;
 @table = sort { $a->[0] cmp $b->[0] } @table;
 $header = ['State', 'City', 'Game Token'];
 
@@ -103,8 +106,9 @@ $header = ['State', 'City', 'Game Token'];
 for my $country ( sort keys %countries ) {
   my $listed_cities   = grep { $_->{country} eq $country } @cities;
   my $expected_cities = $countries{$country}{expected};
+  next unless $expected_cities;
   if ( $listed_cities != $expected_cities ) {
-    warn sprintf "Expected %i cities for %s, found %i",
+    die sprintf "Expected %i cities for %s, found %i",
       $expected_cities, $country, $listed_cities;
   }
 }
