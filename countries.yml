@@ -1,0 +1,998 @@
+---
+-
+  cities:
+    -
+      locations: 4
+      name: 'Camp Verde'
+      token: camp_verde
+    -
+      locations: 3
+      name: Clifton
+      token: clifton
+    -
+      locations: 8
+      name: Flagstaff
+      token: flagstaff
+    -
+      locations: 5
+      name: 'Grand Canyon Village'
+      token: g_canyon_vlg
+    -
+      locations: 6
+      name: Holbrook
+      token: holbrook
+    -
+      locations: 4
+      name: Kayenta
+      token: kayenta
+    -
+      locations: 7
+      name: Kingman
+      token: kingman
+    -
+      locations: 8
+      name: Nogales
+      token: nogales
+    -
+      locations: 5
+      name: Page
+      token: page
+    -
+      locations: 14
+      name: Phoenix
+      token: phoenix
+    -
+      locations: 4
+      name: 'San Simon'
+      token: san_simon
+    -
+      locations: 3
+      name: 'Show Low'
+      token: show_low
+    -
+      locations: 4
+      name: 'Sierra Vista'
+      token: sierra_vista
+    -
+      locations: 7
+      name: Tucson
+      token: tucson
+    -
+      locations: 7
+      name: Yuma
+      token: yuma
+  code: US-AZ
+  name: Arizona
+  token: arizona
+-
+  cities:
+    -
+      locations: 11
+      name: 'El Dorado'
+      token: el_dorado
+    -
+      locations: 7
+      name: Fayetteville
+      token: fayetteville
+    -
+      locations: 8
+      name: 'Fort Smith'
+      token: fort_smith
+    -
+      locations: 7
+      name: Harrison
+      token: harrison
+    -
+      locations: 9
+      name: 'Hot Springs'
+      token: hot_springs
+    -
+      locations: 11
+      name: Jonesboro
+      token: jonesboro
+    -
+      locations: 11
+      name: 'Little Rock'
+      token: little_rock
+    -
+      locations: 10
+      name: 'Pine Bluff'
+      token: pine_bluff
+    -
+      locations: 7
+      name: Springdale
+      token: springdale
+    -
+      locations: 6
+      name: Texarkana
+      token: texarkana_ar
+  code: US-AR
+  name: Arkansas
+  token: arkansas
+-
+  cities:
+    -
+      locations: 12
+      name: Bakersfield
+      token: bakersfield
+    -
+      locations: 8
+      name: Barstow
+      token: barstow
+    -
+      locations: 4
+      name: Blythe
+      token: blythe
+    -
+      locations: 6
+      name: 'El Centro'
+      token: el_centro
+    -
+      locations: 6
+      name: Eureka
+      token: eureka
+    -
+      locations: 13
+      name: Fresno
+      token: fresno
+    -
+      locations: 2
+      name: Hilt
+      token: hilt
+    -
+      locations: 7
+      name: Huron
+      token: huron
+    -
+      locations: 8
+      name: Indio
+      token: indio
+    -
+      locations: 19
+      name: 'Los Angeles'
+      token: los_angeles
+    -
+      locations: 12
+      name: Modesto
+      token: modesto
+    -
+      locations: 4
+      name: Mojave
+      token: mojave
+    -
+      locations: 8
+      name: Oakland
+      token: oakland
+    -
+      locations: 10
+      name: Oxnard
+      token: oxnard
+    -
+      locations: 13
+      name: Redding
+      token: redding
+    -
+      locations: 11
+      name: Sacramento
+      token: sacramento
+    -
+      locations: 12
+      name: 'San Diego'
+      token: san_diego
+    -
+      locations: 8
+      name: 'San Francisco'
+      token: san_francisc
+    -
+      locations: 10
+      name: 'San Jose'
+      token: san_jose
+    -
+      locations: 6
+      name: 'Santa Cruz'
+      token: santa_cruz
+    -
+      locations: 8
+      name: 'Santa Maria'
+      token: santa_maria
+    -
+      locations: 11
+      name: Stockton
+      token: stockton
+    -
+      locations: 7
+      name: Truckee
+      token: truckee
+    -
+      locations: 3
+      name: Ukiah
+      token: ukiah
+  code: US-CA
+  name: California
+  token: california
+-
+  cities:
+    -
+      locations: 8
+      name: Alamosa
+      token: alamosa
+    -
+      locations: 6
+      name: Burlington
+      token: burlington
+    -
+      locations: 8
+      name: 'Colorado Springs'
+      token: colorado_spr
+    -
+      locations: 10
+      name: Denver
+      token: denver
+    -
+      locations: 4
+      name: Durango
+      token: durango
+    -
+      locations: 9
+      name: 'Fort Collins'
+      token: fort_collins
+    -
+      locations: 6
+      name: 'Grand Junction'
+      token: grand_juncti
+    -
+      locations: 6
+      name: Lamar
+      token: lamar
+    -
+      locations: 7
+      name: Montrose
+      token: montrose
+    -
+      locations: 10
+      name: Pueblo
+      token: pueblo
+    -
+      locations: 5
+      name: Rangely
+      token: rangely
+    -
+      locations: 6
+      name: 'Steamboat Springs'
+      token: steamboat_sp
+    -
+      locations: 7
+      name: Sterling
+      token: sterling
+  code: US-CO
+  name: Colorado
+  token: colorado
+-
+  cities:
+    -
+      locations: 7
+      name: Boise
+      token: boise
+    -
+      locations: 9
+      name: "Coeur d'Alene"
+      token: coeur_dalene
+    -
+      locations: 8
+      name: Grangeville
+      token: grangeville
+    -
+      locations: 8
+      name: 'Idaho Falls'
+      token: idaho_falls
+    -
+      locations: 4
+      name: Ketchum
+      token: ketchum
+    -
+      locations: 6
+      name: Lewiston
+      token: lewiston
+    -
+      locations: 4
+      name: Nampa
+      token: nampa
+    -
+      locations: 6
+      name: Pocatello
+      token: pocatello
+    -
+      locations: 5
+      name: Salmon
+      token: salmon
+    -
+      locations: 8
+      name: Sandpoint
+      token: sandpoint
+    -
+      locations: 8
+      name: 'Twin Falls'
+      token: twin_falls
+  code: US-ID
+  name: Idaho
+  token: idaho
+-
+  cities:
+    -
+      locations: 9
+      name: Colby
+      token: colby
+    -
+      locations: 10
+      name: 'Dodge City'
+      token: dodge_city
+    -
+      locations: 11
+      name: Emporia
+      token: emporia
+    -
+      locations: 8
+      name: 'Garden City'
+      token: garden_city
+    -
+      locations: 12
+      name: Hays
+      token: hays
+    -
+      locations: 9
+      name: Hutchinson
+      token: hutchinson
+    -
+      locations: 9
+      name: 'Junction City'
+      token: junction_cty
+    -
+      locations: 8
+      name: 'Kansas City'
+      token: kansas_ci_ks
+    -
+      locations: 4
+      name: Marysville
+      token: marysville
+    -
+      locations: 4
+      name: Phillipsburg
+      token: phillipsburg
+    -
+      locations: 10
+      name: Pittsburg
+      token: pittsburg
+    -
+      locations: 10
+      name: Salina
+      token: salina_ks
+    -
+      locations: 10
+      name: Topeka
+      token: topeka
+    -
+      locations: 11
+      name: Wichita
+      token: wichita
+  code: US-KS
+  name: Kansas
+  token: kansas
+-
+  cities:
+    -
+      locations: 10
+      name: Billings
+      token: billings
+    -
+      locations: 10
+      name: Bozeman
+      token: bozeman
+    -
+      locations: 11
+      name: Butte
+      token: butte
+    -
+      locations: 7
+      name: Glasgow
+      token: glasgow_mt
+    -
+      locations: 8
+      name: Glendive
+      token: glendive
+    -
+      locations: 8
+      name: 'Great Falls'
+      token: great_falls
+    -
+      locations: 10
+      name: Havre
+      token: havre
+    -
+      locations: 7
+      name: Helena
+      token: helena
+    -
+      locations: 9
+      name: Kalispell
+      token: kalispell
+    -
+      locations: 5
+      name: Laurel
+      token: laurel
+    -
+      locations: 6
+      name: Lewistown
+      token: lewistown
+    -
+      locations: 7
+      name: 'Miles City'
+      token: miles_city
+    -
+      locations: 10
+      name: Missoula
+      token: missoula
+    -
+      locations: 6
+      name: Sidney
+      token: sidney
+    -
+      locations: 5
+      name: 'Thompson Falls'
+      token: thompson_f
+  code: US-MT
+  name: Montana
+  token: montana
+-
+  cities:
+    -
+      locations: 4
+      name: Alliance
+      token: alliance
+    -
+      locations: 4
+      name: Chadron
+      token: chadron
+    -
+      locations: 9
+      name: Columbus
+      token: columbus
+    -
+      locations: 7
+      name: 'Grand Island'
+      token: grand_island
+    -
+      locations: 8
+      name: Lincoln
+      token: lincoln
+    -
+      locations: 6
+      name: McCook
+      token: mccook
+    -
+      locations: 7
+      name: Norfolk
+      token: norfolk
+    -
+      locations: 7
+      name: 'North Platte'
+      token: north_platte
+    -
+      locations: 10
+      name: Omaha
+      token: omaha
+    -
+      locations: 8
+      name: Scottsbluff
+      token: scottsbluff
+    -
+      locations: 7
+      name: Sidney
+      token: sidney_ne
+    -
+      locations: 5
+      name: Valentine
+      token: valentine
+  code: US-NE
+  name: Nebraska
+  token: nebraska
+-
+  cities:
+    -
+      locations: 4
+      name: 'Carson City'
+      token: carson_city
+    -
+      locations: 8
+      name: Elko
+      token: elko
+    -
+      locations: 4
+      name: Ely
+      token: ely
+    -
+      locations: 2
+      name: Jackpot
+      token: jackpot
+    -
+      locations: 9
+      name: 'Las Vegas'
+      token: las_vegas
+    -
+      locations: 1
+      name: Pioche
+      token: pioche
+    -
+      locations: 3
+      name: Primm
+      token: primm
+    -
+      locations: 6
+      name: Reno
+      token: reno
+    -
+      locations: 2
+      name: Tonopah
+      token: tonopah
+    -
+      locations: 4
+      name: Winnemucca
+      token: winnemucca
+  code: US-NV
+  name: Nevada
+  token: nevada
+-
+  cities:
+    -
+      locations: 4
+      name: Alamogordo
+      token: alamogordo
+    -
+      locations: 15
+      name: Albuquerque
+      token: albuquerque
+    -
+      locations: 4
+      name: Artesia
+      token: artesia
+    -
+      locations: 4
+      name: Carlsbad
+      token: carlsbad_nm
+    -
+      locations: 5
+      name: Clovis
+      token: clovis
+    -
+      locations: 5
+      name: Farmington
+      token: farmington
+    -
+      locations: 6
+      name: Gallup
+      token: gallup
+    -
+      locations: 5
+      name: Hobbs
+      token: hobbs
+    -
+      locations: 7
+      name: 'Las Cruces'
+      token: las_cruces
+    -
+      locations: 7
+      name: Raton
+      token: raton
+    -
+      locations: 5
+      name: Roswell
+      token: roswell
+    -
+      locations: 9
+      name: 'Santa Fe'
+      token: santa_fe
+    -
+      locations: 6
+      name: Socorro
+      token: socorro
+    -
+      locations: 5
+      name: Tucumcari
+      token: tucumcari
+  code: US-NM
+  name: 'New Mexico'
+  token: new_mexico
+-
+  cities:
+    -
+      locations: 12
+      name: Ardmore
+      token: ardmore
+    -
+      locations: 7
+      name: Clinton
+      token: clinton
+    -
+      locations: 10
+      name: Enid
+      token: enid
+    -
+      locations: 10
+      name: Guymon
+      token: guymon
+    -
+      locations: 6
+      name: Idabel
+      token: idabel
+    -
+      locations: 8
+      name: Lawton
+      token: lawton
+    -
+      locations: 9
+      name: McAlester
+      token: mcalester
+    -
+      locations: 13
+      name: 'Oklahoma City'
+      token: oklahoma_cit
+    -
+      locations: 11
+      name: Tulsa
+      token: tulsa
+    -
+      locations: 8
+      name: Woodward
+      token: woodward
+  code: US-OK
+  name: Oklahoma
+  token: oklahoma
+-
+  cities:
+    -
+      locations: 7
+      name: Astoria
+      token: astoria
+    -
+      locations: 9
+      name: Bend
+      token: bend
+    -
+      locations: 5
+      name: Burns
+      token: burns
+    -
+      locations: 7
+      name: 'Coos Bay'
+      token: coos_bay
+    -
+      locations: 8
+      name: Eugene
+      token: eugene
+    -
+      locations: 3
+      name: 'Klamath Falls'
+      token: klamath_f
+    -
+      locations: 5
+      name: Lakeview
+      token: lakeview
+    -
+      locations: 11
+      name: Medford
+      token: medford
+    -
+      locations: 8
+      name: Newport
+      token: newport
+    -
+      locations: 9
+      name: Ontario
+      token: ontario
+    -
+      locations: 6
+      name: Pendleton
+      token: pendleton
+    -
+      locations: 10
+      name: Portland
+      token: portland
+    -
+      locations: 7
+      name: Salem
+      token: salem
+    -
+      locations: 6
+      name: 'The Dalles'
+      token: the_dalles
+  code: US-OR
+  name: Oregon
+  token: oregon
+-
+  cities:
+    -
+      locations: 10
+      name: Abilene
+      token: abilene
+    -
+      locations: 13
+      name: Amarillo
+      token: amarillo
+    -
+      locations: 10
+      name: Austin
+      token: austin
+    -
+      locations: 8
+      name: Beaumont
+      token: beaumont
+    -
+      locations: 9
+      name: Brownsville
+      token: brownsville
+    -
+      locations: 12
+      name: 'Corpus Christi'
+      token: corpus_chris
+    -
+      locations: 5
+      name: Dalhart
+      token: dalhart
+    -
+      locations: 11
+      name: Dallas
+      token: dallas
+    -
+      locations: 7
+      name: 'Del Rio'
+      token: del_rio
+    -
+      locations: 7
+      name: 'El Paso'
+      token: el_paso
+    -
+      locations: 8
+      name: 'Fort Stockton'
+      token: fort_stockto
+    -
+      locations: 11
+      name: 'Fort Worth'
+      token: fort_worth
+    -
+      locations: 4
+      name: Galveston
+      token: galveston
+    -
+      locations: 8
+      name: Houston
+      token: houston
+    -
+      locations: 7
+      name: Huntsville
+      token: huntsville
+    -
+      locations: 7
+      name: Junction
+      token: junction
+    -
+      locations: 9
+      name: Laredo
+      token: laredo
+    -
+      locations: 11
+      name: Longview
+      token: longview_tx
+    -
+      locations: 14
+      name: Lubbock
+      token: lubbock
+    -
+      locations: 10
+      name: Lufkin
+      token: lufkin
+    -
+      locations: 5
+      name: McAllen
+      token: mcallen
+    -
+      locations: 12
+      name: Odessa
+      token: odessa
+    -
+      locations: 6
+      name: 'San Angelo'
+      token: san_angelo
+    -
+      locations: 14
+      name: 'San Antonio'
+      token: san_antonio
+    -
+      locations: 3
+      name: Texarkana
+      token: texarkana
+    -
+      locations: 8
+      name: Tyler
+      token: tyler
+    -
+      locations: 6
+      name: 'Van Horn'
+      token: van_horn
+    -
+      locations: 11
+      name: Victoria
+      token: victoria
+    -
+      locations: 10
+      name: Waco
+      token: waco
+    -
+      locations: 7
+      name: 'Wichita Falls'
+      token: wichita_fall
+  code: US-TX
+  name: Texas
+  token: texas
+-
+  cities:
+    -
+      locations: 7
+      name: 'Cedar City'
+      token: cedar_city
+    -
+      locations: 6
+      name: Logan
+      token: logan
+    -
+      locations: 8
+      name: Moab
+      token: moab
+    -
+      locations: 8
+      name: Ogden
+      token: ogden
+    -
+      locations: 8
+      name: Price
+      token: price
+    -
+      locations: 6
+      name: Provo
+      token: provo
+    -
+      locations: 8
+      name: Salina
+      token: salina
+    -
+      locations: 8
+      name: 'Salt Lake City'
+      token: salt_lake
+    -
+      locations: 5
+      name: 'St. George'
+      token: st_george
+    -
+      locations: 7
+      name: Vernal
+      token: vernal
+  code: US-UT
+  name: Utah
+  token: utah
+-
+  cities:
+    -
+      locations: 6
+      name: Aberdeen
+      token: aberdeen_wa
+    -
+      locations: 6
+      name: Bellingham
+      token: bellingham
+    -
+      locations: 9
+      name: Colville
+      token: colville
+    -
+      locations: 6
+      name: Everett
+      token: everett
+    -
+      locations: 4
+      name: 'Grand Coulee'
+      token: grand_coulee
+    -
+      locations: 7
+      name: Kennewick
+      token: kennewick
+    -
+      locations: 3
+      name: Longview
+      token: longview
+    -
+      locations: 8
+      name: Olympia
+      token: olympia
+    -
+      locations: 3
+      name: Omak
+      token: omak
+    -
+      locations: 9
+      name: 'Port Angeles'
+      token: port_angeles
+    -
+      locations: 7
+      name: Seattle
+      token: seattle
+    -
+      locations: 8
+      name: Spokane
+      token: spokane
+    -
+      locations: 7
+      name: Tacoma
+      token: tacoma
+    -
+      locations: 5
+      name: Vancouver
+      token: vancouver
+    -
+      locations: 8
+      name: Wenatchee
+      token: wenatchee
+    -
+      locations: 8
+      name: Yakima
+      token: yakima
+  code: US-WA
+  name: Washington
+  token: washington
+-
+  cities:
+    -
+      locations: 8
+      name: Casper
+      token: casper
+    -
+      locations: 10
+      name: Cheyenne
+      token: cheyenne
+    -
+      locations: 6
+      name: Cody
+      token: cody
+    -
+      locations: 7
+      name: Evanston
+      token: evanston
+    -
+      locations: 7
+      name: Gillette
+      token: gillette
+    -
+      locations: 6
+      name: Jackson
+      token: jackson
+    -
+      locations: 7
+      name: Laramie
+      token: laramie
+    -
+      locations: 7
+      name: Rawlins
+      token: rawlins
+    -
+      locations: 6
+      name: Riverton
+      token: riverton
+    -
+      locations: 9
+      name: 'Rock Springs'
+      token: rock_springs
+    -
+      locations: 6
+      name: Sheridan
+      token: sheridan
+  code: US-WY
+  name: Wyoming
+  token: wyoming
+--- 1.55.0.99

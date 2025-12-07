@@ -1,5 +1,9 @@
+requires "Archive::SCS";
+requires "Data::SCS::DefParser";
 requires "HTTP::Tiny";
+requires "IO::Socket::SSL";
 requires "JSON::MaybeXS";
 requires "Path::Tiny";
 requires "Text::CSV";
 requires "Text::Table::HTML";
+requires "YAML::Tiny";

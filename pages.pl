@@ -5,13 +5,36 @@ use warnings;
 
 use HTTP::Tiny;
 use JSON::MaybeXS;
+use List::Util 'first';
 use Path::Tiny;
 use Text::CSV 'csv';
 use Text::Table::HTML;
 use Time::Piece;
+use YAML::Tiny;
 
 my $url = 'https://truckermudgeon.github.io/extra-labels.geojson';
 my $dir = path 'pages';
+
+
+# Use the static YAML and CSV files as primary data source
+
+my %countries;
+$countries{ $_->{code} } = $_ for YAML::Tiny->read('countries.yml')->[0]->@*;
+
+my $countries_table = csv
+  headers => 'auto',
+  in      => 'countries.csv';
+
+for my $row ( $countries_table->@* ) {
+  my $country = ($countries{ $row->{country} } //= {});
+  $country->{code}     = $row->{country};
+  $country->{name}     = $row->{name};
+  $country->{expected} = $row->{cities};
+}
+
+
+# Augment YAML game data dump with GeoJSON map labels
+# (the GeoJSON may include more cities, but is more fragile overall)
 
 my $response = HTTP::Tiny->new->get($url);
 $response->{success} or die "$url: $response->{status} $response->{reason}";
@@ -23,33 +46,42 @@ $json->{features} = [ grep {
 } $json->{features}->@* ];
 push $json->{features}->@*,
   map {+{ properties => { kind => 'city', $_->%* } }} (
-    { country => 'US-CA', text => 'Hilt',         city => 'hilt' },
-    { country => 'US-ID', text => 'Ketchum',      city => 'ketchum' },
-    { country => 'US-KS', text => 'Kansas City',  city => 'kansas_ci_ks' },
     { country => 'US-MO', text => 'Saint Joseph', city => 'st_joseph' },
     { country => 'US-MO', text => 'Saint Louis',  city => 'st_louis' },
-    { country => 'US-TX', text => 'Abilene',      city => 'abilene' },
-    { country => 'US-TX', text => 'Longview',     city => 'longview_tx' },
-    { country => 'US-TX', text => 'Lubbock',      city => 'lubbock' },
-    { country => 'US-TX', text => 'San Antonio',  city => 'san_antonio' },
-    { country => 'US-TX', text => 'Texarkana',    city => 'texarkana' },
-    { country => 'US-OR', text => 'Portland',     city => 'portland' },
-    { country => 'US-WA', text => 'Grand Coulee', city => 'grand_coulee' },
   );
 
-my %cities;
-$cities{ $_->{city} // "$_->{country} $_->{text}" } = $_ for
-  grep { $_->{kind} && $_->{kind} eq 'city' }
-  map  { $_->{properties} }
-  $json->{features}->@*;
-my @cities = sort {
-  $a->{country} cmp $b->{country} or
-  $a->{city}    cmp $b->{city}
-} map {+{
-  country => $_->{country},
-  city    => $_->{text},
-  token   => $_->{city},
-}} values %cities;
+for my $feature ( $json->{features}->@* ) {
+  no warnings 'uninitialized';
+  my $meta = $feature->{properties};
+  next unless $meta->{country} && $meta->{kind} eq 'city';
+
+  my $country = ($countries{ $meta->{country} } //= {
+    cities => [],
+    code   => $meta->{country},
+  });
+  my $city = defined $meta->{city} &&
+    first { $meta->{city} eq $_->{token} } $country->{cities}->@*;
+
+  push $country->{cities}->@*, {
+    token => $meta->{city},
+    name  => $meta->{text},
+  } unless $city;
+}
+
+
+# Write output files
+
+my @cities;
+for my $country_code ( sort keys %countries ) {
+  my $country_cities = $countries{ $country_code }{cities};
+  $country_cities->@* = sort { $a->{name} cmp $b->{name} } $country_cities->@*;
+
+  push @cities, map {+{
+    country => $country_code,
+    city    => $_->{name},
+    token   => $_->{token},
+  }} $country_cities->@*;
+}
 
 $dir->mkdir;
 $dir->child('ats-cities.json')->spew_raw(encode_json \@cities);
@@ -63,18 +95,14 @@ my @table = map {[
 csv in => [$header, @table], out => "$dir/ats-cities.csv";
 
 # Get human-readable country/state names for HTML output
-my $countries = csv in => "countries.csv";
-my %countries;
-$countries{ $_->[0] } = $_ for $countries->@*;
-$_->[0] = $countries{ $_->[0] }->[1] for @table;
+$_->[0] = $countries{ $_->[0] }{name} for @table;
 @table = sort { $a->[0] cmp $b->[0] } @table;
 $header = ['State', 'City', 'Game Token'];
 
 # Verify that the city count for each country/state is as expected
-delete $countries{country};
 for my $country ( sort keys %countries ) {
   my $listed_cities   = grep { $_->{country} eq $country } @cities;
-  my $expected_cities = $countries{$country}->[2];
+  my $expected_cities = $countries{$country}{expected};
   if ( $listed_cities != $expected_cities ) {
     warn sprintf "Expected %i cities for %s, found %i",
       $expected_cities, $country, $listed_cities;
