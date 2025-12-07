@@ -46,6 +46,7 @@ $json->{features} = [ grep {
 } $json->{features}->@* ];
 push $json->{features}->@*,
   map {+{ properties => { kind => 'city', $_->%* } }} (
+    { country => 'US-LA', text => 'Port Fourchon', city => undef },
     { country => 'US-MO', text => 'Saint Joseph', city => 'st_joseph' },
     { country => 'US-MO', text => 'Saint Louis',  city => 'st_louis' },
   );
