@@ -2,7 +2,7 @@
 -
   cities:
     -
-      locations: 4
+      locations: 6
       name: 'Camp Verde'
       token: camp_verde
     -
@@ -10,31 +10,31 @@
       name: Clifton
       token: clifton
     -
-      locations: 8
+      locations: 6
       name: Flagstaff
       token: flagstaff
     -
-      locations: 5
+      locations: 4
       name: 'Grand Canyon Village'
       token: g_canyon_vlg
     -
       locations: 6
-      name: Holbrook
-      token: holbrook
-    -
-      locations: 4
       name: Kayenta
       token: kayenta
     -
-      locations: 7
+      locations: 10
       name: Kingman
       token: kingman
+    -
+      locations: 7
+      name: 'Lake Havasu City'
+      token: lake_havasu
     -
       locations: 8
       name: Nogales
       token: nogales
     -
-      locations: 5
+      locations: 6
       name: Page
       token: page
     -
@@ -46,7 +46,7 @@
       name: 'San Simon'
       token: san_simon
     -
-      locations: 3
+      locations: 6
       name: 'Show Low'
       token: show_low
     -
@@ -57,6 +57,10 @@
       locations: 7
       name: Tucson
       token: tucson
+    -
+      locations: 8
+      name: Winslow
+      token: winslow
     -
       locations: 7
       name: Yuma
@@ -547,7 +551,7 @@
       name: Alamogordo
       token: alamogordo
     -
-      locations: 15
+      locations: 14
       name: Albuquerque
       token: albuquerque
     -
@@ -567,7 +571,7 @@
       name: Farmington
       token: farmington
     -
-      locations: 6
+      locations: 7
       name: Gallup
       token: gallup
     -
@@ -595,7 +599,7 @@
       name: Socorro
       token: socorro
     -
-      locations: 5
+      locations: 6
       name: Tucumcari
       token: tucumcari
   code: US-NM
@@ -995,4 +999,4 @@
   code: US-WY
   name: Wyoming
   token: wyoming
---- 1.55.0.99
+--- 1.58.0.313
