@@ -1,5 +1,5 @@
-requires "Archive::SCS";
-requires "Data::SCS::DefParser";
+recommends "Archive::SCS";
+recommends "Data::SCS::DefParser";
 requires "HTTP::Tiny";
 requires "IO::Socket::SSL";
 requires "JSON::MaybeXS";
