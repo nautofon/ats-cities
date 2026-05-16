@@ -46,6 +46,8 @@ $json->{features} = [ grep {
 } $json->{features}->@* ];
 push $json->{features}->@*,
   map {+{ properties => { kind => 'city', $_->%* } }} (
+    { country => 'US-IL', text => 'East Saint Louis', city => undef },
+    { country => 'US-IL', text => 'Moline', city => undef },
     { country => 'US-LA', text => 'Port Fourchon', city => 'port_fourcho' },  # via ETS2LA data
     { country => 'US-MO', text => 'Saint Joseph', city => 'st_joseph' },
     { country => 'US-MO', text => 'Saint Louis',  city => 'st_louis' },
