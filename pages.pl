@@ -51,6 +51,7 @@ push $json->{features}->@*,
     { country => 'US-LA', text => 'Port Fourchon', city => 'port_fourcho' },  # via ETS2LA data
     { country => 'US-MO', text => 'Saint Joseph', city => 'st_joseph' },
     { country => 'US-MO', text => 'Saint Louis',  city => 'st_louis' },
+    { country => 'US-SD', text => 'Fort Pierre',  city => undef },
   );
 
 for my $feature ( $json->{features}->@* ) {
